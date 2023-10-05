@@ -59,7 +59,7 @@ Send a POST request to: `https://localhost:8000/api/services`
 
       The JSON object will be read and will either add a new service if the `Ref` does not match any existing already, or overwrite existing data if it does
 
-      ###CLI Tools
+###CLI Tools
 
       There is a ./apiclient.php in the working directory of the project that specifies the CLI process. Once the project is running in your terminal, this is how you query the project:
 
