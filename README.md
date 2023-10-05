@@ -29,4 +29,40 @@ This is my first exposure to PHP & Laravel in a small API-based project. Coming 
 
   I simply ran out of time with my project and initially had not researched much into this as it wasn't part of minimum functionality. I have no other comment!
 
+## Instructions for use
+
+### Initial Setup
+
+- `git clone` the repo onto your local machine and install dependecies using `composer install`
+- start the application using `php artisan serve`
+
+  The application will be running on `localhost:8000`
+
+### GET & POST via Postman (or equivalent)
+
+**All Services**
+
+Send a GET request to: `https://localhost:8000/api/services`
+
+**Services by Country**
+
+Send a GET request to: `https://localhost:8000/api/services/{countryCode}`
+
+- `{countryCode}` will be a request param in the url, simply add gb/fr etc
+
+**Post New or Update Service**
+
+Send a POST request to: `https://localhost:8000/api/services`
+
+- Add JSON to the body of the request
+    - eg ```{ "Ref" : "expRef", "Centre" : "exmpleCentre", "Service" : "exmpleService", "Country" : "gb"}```
+                
+
+
+
+
+
+
+
+
   
