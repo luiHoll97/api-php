@@ -7,9 +7,19 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Instruct-ERIC php-api Test
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This is my first exposure to PHP & Laravel in a small API-based project. Coming from PERN stack with Typescript, there was a lot of trial and error involved, especially with underexpected errors due to occasionally forgetting to add semi colons!
+
+### Task Overview
+
+[x] Endpoint GET for all services
+[x] Endpoint GET for services filtered by countryCode (not case sensitive)
+[x] Endpoint POST to either update or add a new service, linked to `Ref`
+[] Docker Successful Setup
+[x] Cli Commands for all Endpoints
+
+
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
