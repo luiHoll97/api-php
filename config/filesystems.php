@@ -56,6 +56,11 @@ return [
             'throw' => false,
         ],
 
+        'csv' => [
+            'driver' => 'local',
+            'root' => storage_path('app/data'),
+        ]
+
     ],
 
     /*
