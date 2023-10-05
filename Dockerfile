@@ -14,6 +14,9 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd pdo pdo_mysql
 
+# Copy composer.json and composer.lock to the container
+COPY composer.json composer.lock ./
+
 # Copy your Laravel application files to the container
 COPY . .
 
@@ -21,10 +24,10 @@ COPY . .
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Install Laravel dependencies using Composer
-RUN composer install
+RUN composer install --no-scripts
 
 # Expose port 9000 for PHP-FPM
-EXPOSE 8000
+EXPOSE 9000
 
 # Start PHP-FPM
 CMD ["php-fpm"]
