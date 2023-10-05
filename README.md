@@ -56,6 +56,37 @@ Send a POST request to: `https://localhost:8000/api/services`
 
 - Add JSON to the body of the request
     - eg ```{ "Ref" : "expRef", "Centre" : "exmpleCentre", "Service" : "exmpleService", "Country" : "gb"}```
+
+      The JSON object will be read and will either add a new service if the `Ref` does not match any existing already, or overwrite existing data if it does
+
+      ###CLI Tools
+
+      There is a ./apiclient.php in the working directory of the project that specifies the CLI process. Once the project is running in your terminal, this is how you query the project:
+
+      **All Services**
+
+      Run `./apiclient.php get http://localhost:8000/api/services`
+
+      **Services By Country**
+
+      Run `./apiclient.php get http://localhost:8000/api/services/{countryCode}`
+
+      **Post New or Update Service**
+
+      Run `./apiclient.php post http://localhost:8000/api/services "exampleRef" "exampleCentre" "exampleService" "de"`
+
+      - As with before, the `exampleRef` will be taken as a `Ref` value and compare against existing data.
+     
+
+      ## Reflections
+
+As frustrating as learning new languages can be, this was really enjoyable. The documentation and support for PHP/Laravel is astounding and teething problems I expereienced were solved a lot quicker than normal. I didn't know much about PHP, but some of the stuff it can do is magical, especially the inclusion of PHP CLI commands. I will defintely look further into it in the future. Thanks for reading my project!
+
+
+
+
+
+      
                 
 
 
