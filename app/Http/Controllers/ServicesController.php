@@ -11,6 +11,7 @@ class ServicesController extends Controller
     public function index(Request $request)
     {
         $disk = Storage::disk('csv');
+
         $csvFilePath = base_path('storage/app/data/services.csv');
         if ($disk->exists('services.csv')) {
             $servicesArray = [];
@@ -35,7 +36,7 @@ class ServicesController extends Controller
     
     public function getCountryByCode(Request $request, $countryCode)
     {
-        $csvFilePath = base_path('database/services.csv');
+        $csvFilePath = base_path('storage/app/data/services.csv');
         $services = fopen($csvFilePath, 'r');
         $servicesArray = [];
         while (($line = fgetcsv($services)) !== FALSE) {
@@ -49,7 +50,7 @@ class ServicesController extends Controller
 
     public function addNewOrUpdate(Request $request)
     {
-        $csvFilePath = base_path('database/services.csv');
+        $csvFilePath = base_path('storage/app/data/services.csv');
         $services = fopen($csvFilePath, 'a+');
          // Read existing services from the CSV file
          $existingServices = [];
@@ -90,7 +91,7 @@ class ServicesController extends Controller
          foreach ($existingServices as $service) {
              fputcsv($services, $service);
          }
-     
+         
          fclose($services);
      
          return response()->json(['message' => 'Service updated or created']);
