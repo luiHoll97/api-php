@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ServicesController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,15 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group([
+    'prefix' => 'services'
+], function () {
+    Route::get('/', [ServicesController::class, 'index']);
+    Route::get('/{countryCode}', [ServicesController::class, 'getCountryByCode']);
+    Route::post('/', [ServicesController::class, 'addNewOrUpdate']);
 });
-
-Route::get('/test', function (Request $request) {
-    return response()->json(['message' => 'This is a test']);
-});
-
-Route::post('/test', function (Request $request) {
-    return response()->json(['message' => 'This is a POST test']);
-});
-
