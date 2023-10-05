@@ -79,7 +79,9 @@ Run `./apiclient.php post http://localhost:8000/api/services "exampleRef" "examp
 
 ## Reflections
 
-As frustrating as learning new languages can be, this was really enjoyable. The documentation and support for PHP/Laravel is astounding and teething problems I expereienced were solved a lot quicker than normal. I didn't know much about PHP, but some of the stuff it can do is magical, especially the inclusion of PHP CLI commands. I will defintely look further into it in the future. Thanks for reading my project!
+As frustrating as learning new languages can be, this was really enjoyable. The documentation and support for PHP/Laravel is astounding and teething problems I expereienced were solved a lot quicker than normal. I didn't know much about PHP, but some of the stuff it can do is magical, especially the inclusion of PHP CLI commands. I will defintely look further into it in the future. Thanks for reading my project.
+
+Equally, I would love the opportunity to complete this task using node.js (with Ts)!
 
 
 
