@@ -13,11 +13,11 @@ This is my first exposure to PHP & Laravel in a small API-based project. Coming 
 
 ### Task Overview
 
-[x] Endpoint GET for all services
-[x] Endpoint GET for services filtered by countryCode (not case sensitive)
-[x] Endpoint POST to either update or add a new service, linked to `Ref`
-[] Docker Successful Setup
-[x] Cli Commands for all Endpoints
+- [x] Endpoint GET for all services
+- [x] Endpoint GET for services filtered by countryCode (not case sensitive)
+- [x] Endpoint POST to either update or add a new service, linked to `Ref`
+- [] Docker Successful Setup
+- [x] Cli Commands for all Endpoints
 
 
 
